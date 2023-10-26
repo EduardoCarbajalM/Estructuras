@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width">
+        <title>Estructuras</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sometype+Mono:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora&family=Sometype+Mono:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:wght@700&family=Sometype+Mono:wght@500&display=swap" rel="stylesheet">    
+    
+    </head>
+
+    <body>
+        <header>
+            <a href="https://www.ipn.mx/"><img class="Logo-IPN" src="imagenes/Logo-IPN.png" alt="Logo IPN" style="float: left;"></a>
+            <a href="https://www.upiicsa.ipn.mx/"><img class="Logo-UPIICSA" src="imagenes/Logo-UPIICSA.png" alt="Logo UPIICSA IPN" style="float: right;"></a>
+            <h1>INSTITUTO POLITECNICO NACIONAL</h1>
+            <h1>UPIICSA</h1>
+            <br>
+            <h2>Abstracción y uso de datos</h2>
+            <br>
+            <h2>Eduardo Carbajal Mendoza</h2>
+          </header>
+        
+        <main>
+            <section class="pilas">
+                <div class="left">
+                    <h2>1. Pilas en Python</h2>
+                    <pre class="python">
+        class Pila:
+            def __init__(self):
+                self.items = []
+        
+            def esta_vacia(self):
+                return len(self.items) == 0
+        
+            def apilar(self, item):
+                self.items.append(item)
+        
+            def desapilar(self):
+                if not self.esta_vacia():
+                    return self.items.pop()
+                else:
+                    return None
+        
+        # Ejemplo de uso de una pila
+        mi_pila = Pila()
+        mi_pila.apilar(1)
+        mi_pila.apilar(2)
+        mi_pila.apilar(3)
+        print(mi_pila.desapilar())  # Desapila el 3
+                    </pre>
+                </div>
+            
+                <div class="right">
+                    <h2>Video</h2>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6ajXtbC66WE?si=MghKAlFiflaDqcLQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            
+                <div class="description">
+                    <h2>Descripción</h2>
+                    <p> Este código de Python define una clase llamada Pila. La clase tiene cuatro métodos:<br><br> __init__, 
+                        esta_vacia, apilar y desapilar. <br><br>
+                        En el ejemplo de uso, se crea un objeto de la clase Pila llamado 
+                        mi_pila. Luego se agregan los números 1, 2 y 3 a la pila utilizando el método apilar.
+                        Finalmente, se elimina y se imprime el último elemento de la pila utilizando el método desapilar.</p>
+                </div>    
+            </section>
+
+            <section class ="colas">
+                <div class="left">
+                    <h2>2. Colas en Python</h2>
+                    <pre class="python">
+        from collections import deque
+
+        mi_cola = deque()
+        mi_cola.append(1)
+        mi_cola.append(2)
+        mi_cola.append(3)
+        print(mi_cola.popleft())  # Desencola el 1
+                    </pre>
+                </div>
+
+                <div class="right">
+                    <h2>Video</h2>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6ajXtbC66WE?si=MghKAlFiflaDqcLQ&amp;start=76" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                
+                </div>
+                <div class="description">
+                    <h2>Descripción</h2>
+                    <p>El código en Python utiliza la clase "deque" de la biblioteca "collections" para crear una cola FIFO. <br>
+                        Se agrega 1, 2 y 3 a la cola y se elimina e imprime el primer elemento con "popleft".</p>
+                </div>    
+            </section>
+
+            <section class ="listas">
+                <div class="left">
+                    <h2>3. Listas en Python</h2>
+                    <pre class="python">
+        mi_lista = [1, 2, 3, 4, 5]
+        print(mi_lista[2])  
+        # Acceder al tercer elemento (índice 2)
+                    </pre>
+                </div>
+
+                <div class="right">
+                    <h2>Video</h2>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6ajXtbC66WE?si=MghKAlFiflaDqcLQ&amp;start=116" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+
+                <div class="description">
+                    <h2>Descripción</h2>
+                    <p>El código define una lista llamada "mi_lista" que contiene los números 1, 2, 3, 4 y 5. 
+                        Luego, se utiliza la instrucción "print" para acceder al tercer elemento de la lista, 
+                        que tiene un índice de 2 (los índices comienzan en 0 en Python). <br><br>
+                        En este caso, se imprimirá el valor 3, ya que es el tercer elemento de la lista.</p>
+                </div>    
+            </section>
+
+            <section class ="arboles">
+                <div class="left">
+                    <h2>4. Arboles en Python</h2>
+                    <pre class="python">
+        class NodoArbol:
+        def __init__(self, valor):
+            self.valor = valor
+            self.izquierda = None
+            self.derecha = None
+    
+        # Ejemplo de un árbol binario
+        raiz = NodoArbol(1)
+        raiz.izquierda = NodoArbol(2)
+        raiz.derecha = NodoArbol(3)
+                    </pre>
+                </div>
+
+                <div class="right">
+                    <h2>Video</h2>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6ajXtbC66WE?si=MghKAlFiflaDqcLQ&amp;start=173" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+
+                <div class="description">
+                    <h2>Descripción</h2>
+                    <p>Este código crea una estructura de datos que simula un árbol binario. Cada "nodo" del árbol contiene un número o "valor". El nodo también puede tener dos ramas, una a la "izquierda" y otra a la "derecha," que a su vez son otros nodos. <br><br>
+                    En el ejemplo, creamos un árbol con tres nodos. El primer nodo es la "raíz" con un valor de 1. A continuación, le asignamos un nodo con el valor 2 a su izquierda y otro nodo con el valor 3 a su derecha. Esto representa una estructura de árbol sencilla con tres nodos interconectados.</p>
+                </div>    
+            </section>
+
+            <section class ="grafos">
+                <div class="left">
+                    <h2>5. Grafos en Python</h2>
+                    <pre class="python">
+        grafo = {
+            'A': ['B', 'C'],
+            'B': ['A', 'C', 'D'],
+            'C': ['A', 'B', 'D'],
+            'D': ['B', 'C']
+        }
+        
+        # Obtener los vecinos del nodo 'B'
+        print(grafo['B'])  # Devuelve ['A', 'C', 'D']
+                    </pre>
+                </div>
+
+                <div class="right">
+                    <h2>Video</h2>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6ajXtbC66WE?si=MghKAlFiflaDqcLQ&amp;start=216" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+
+                <div class="description">
+                    <h2>Descripción</h2>
+                    <p>Este código representa un conjunto de conexiones entre nodos usando un grafo. Imagina que estos nodos son como estaciones en una red de transporte, y las conexiones son las rutas que conectan esas estaciones.<br><br>
+                      En este caso, el grafo tiene cuatro estaciones etiquetadas como 'A', 'B', 'C' y 'D'. Cada estación está conectada a otras estaciones, y esta información se almacena en el diccionario llamado "grafo."<br><br>
+                      Si quieres saber cuáles son las estaciones conectadas a la estación 'B', simplemente miras en el diccionario en la entrada 'B', y encontrarás una lista que contiene 'A', 'C' y 'D'. Esto significa que desde la estación 'B', puedes llegar directamente a las estaciones 'A', 'C' y 'D'.</p>
+                  </div>  
+            </section>
+        </main>
+    </body>
+
+    <footer class="pie-pagina">
+            <p class="copyright">&copy Eduardo Carbajal Mendoza - 2023</p>
+            <div class="Redes-Sociales">
+                <ul><li><a href="https://www.facebook.com/profile.php?id=100020107996561"><img src="imagenes/002-facebook.png" alt="Facebook"></a></li></ul>
+                <ul><li><a href="https://www.instagram.com/carbajal_eduardo.m_/"><img src="imagenes/003-instagram.png" alt="Instagram"></a></li></ul>
+                <ul><li><a href="https://www.linkedin.com/in/eduardo-carbajal-mendoza/"><img src="imagenes/004-linkedin.png" alt="LinkeDin"></a></li></ul>
+                <ul><li><a href="https://github.com/Eduardo-Carbajal-M"><img src="imagenes/001-github.png" alt="GitHub"></a></li></ul>
+            </div>
+    </footer>
+</html>
